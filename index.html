@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion(js)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .container {
+            height: 50px;
+            width: 300px;
+            margin: auto;
+            margin-top: 30px;
+        }
+
+        .content {
+            background-color:  rgb(135, 134, 134);
+            color: #fff;
+            font-size: 18px;
+            display: none;
+            padding: 10px;
+            text-align: center;
+        }
+
+        p {
+            background-color: burlywood;
+            text-align: center;
+            padding: 30px 0;
+            cursor: pointer;
+            font-family: cursive;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="accord">
+            <ol>
+                <li>
+                    <p class="wup">Click Here</p>
+                    <div class="content">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem sunt numquam debitis quia
+                        reprehenderit obcaecati delectus adipisci, quasi, ipsam hic mollitia praesentium quo! Nemo
+                        labore fugit accusantium soluta veritatis amet.
+                    </div>
+                </li>
+            </ol>
+            <ol>
+                <li>
+                    <p class="wup">Click Here</p>
+                    <div class="content">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem sunt numquam debitis quia
+                        reprehenderit obcaecati delectus adipisci, quasi, ipsam hic mollitia praesentium quo! Nemo
+                        labore fugit accusantium soluta veritatis amet.
+                    </div>
+                </li>
+            </ol>
+            <ol>
+                <li>
+                    <p class="wup">Click Here</p>
+                    <div class="content">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem sunt numquam debitis quia
+                        reprehenderit obcaecati delectus adipisci, quasi, ipsam hic mollitia praesentium quo! Nemo
+                        labore fugit accusantium soluta veritatis amet.
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </div>
+
+</body>
+<script>
+    var acc = document.getElementsByClassName("wup");
+    for (var i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+            var check = this.nextElementSibling;
+            if (check.style.display === "block") {
+                check.style.display = "none";
+            } else {
+                check.style.display = "block";
+            }
+        })
+    }
+</script>
+
+</html>
